@@ -1,130 +1,160 @@
+/* Estilos generales */
 body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: #d9a89a;
+  background-image:
+    linear-gradient(#b46d58 40px, transparent 40px),
+    linear-gradient(90deg, #b46d58 40px, transparent 40px),
+    linear-gradient(#b46d58 20px, transparent 20px),
+    linear-gradient(90deg, #b46d58 20px, transparent 20px);
+  background-size: 80px 40px, 80px 40px, 40px 20px, 40px 20px;
+  background-position: 0 0, 0 20px, 0 0, 20px 0;
+}
+
+.navbar {
+  background-color: #a7553a;
+  padding: 10px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Toldo */
+.awning {
+  height: 100px;
+  background: repeating-linear-gradient(
+    90deg,
+    #a7553a 0,
+    #a7553a 80px,
+    #f6e9d4 80px,
+    #f6e9d4 160px
+  );
+  position: relative;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+}
+
+.awning::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: repeating-linear-gradient(
+    90deg,
+    #a7553a 0,
+    #a7553a 80px,
+    #f6e9d4 80px,
+    #f6e9d4 160px
+  );
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Layout principal */
+.content {
+  display: flex;
+  max-width: 1200px;
+  margin: 80px auto 0;
+  padding: 20px;
+  position: relative;
+}
+
+.catalog {
+  width: 200px;
+  background: #e8dcc5;
+  border: 2px solid #7d7569;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.catalog h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.catalog ul {
+  list-style: none;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
 }
 
-.container {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 2px solid #d71920;
-  border-radius: 8px;
-  background-color: #f9f9f9;
+.catalog li {
+  margin: 5px 0;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 20px;
+/* Vitrina */
+.vitrine {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 10px;
+  border: 2px solid #7d7569;
+  background: #b8b1a4;
 }
 
-.logo {
-  max-width: 180px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-h1 {
-  color: #d71920;
-  margin: 0;
-  font-size: 2rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
-fieldset {
-  border: 1px solid #d71920;
-  padding: 15px 20px 20px;
-  border-radius: 6px;
-  margin-bottom: 20px;
-}
-
-legend {
-  font-weight: bold;
-  color: #d71920;
-  padding: 0 5px;
-  font-size: 1.2rem;
-}
-
-label {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 1rem;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #d71920;
-  outline: none;
-  box-shadow: 0 0 3px #d71920;
-}
-
-button {
-  align-self: center;
-  background-color: #d71920;
-  color: white;
-  padding: 12px 25px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.25s ease-in-out;
-}
-
-button:hover,
-button:focus {
-  background-color: #a8141a;
-  outline: none;
-}
-
-pre {
-  background-color: #eeeeee;
+.vitrine-item {
+  background: #e8dcc5;
+  border: 2px solid #7d7569;
   padding: 15px;
-  border-radius: 5px;
-  margin-top: 10px;
-  max-height: 300px;
-  overflow-y: auto;
-  font-size: 0.9rem;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 640px) {
-  .container {
-    margin: 10px;
-    padding: 15px;
-  }
+.vitrine-item .icon {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
 
-  button {
-    width: 100%;
-    font-size: 1rem;
-  }
+/* Letrero exterior */
+.signboard {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 220px;
+  background: #333333;
+  color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
+  transform: skewY(-2deg);
 }
-.error-message {
-  color: #d71920;
-  font-size: 0.85rem;
-  margin-top: -10px;
-  margin-bottom: 10px;
-  display: none;
+
+.signboard h3 {
+  margin-top: 0;
 }
-.error-message.active {
-  display: block;
+
+.signboard ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.signboard::before,
+.signboard::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  width: 15px;
+  height: 20px;
+  background: #333333;
+}
+
+.signboard::before {
+  left: 20px;
+  transform: skewY(10deg);
+}
+
+.signboard::after {
+  right: 20px;
+  transform: skewY(-10deg);
 }
