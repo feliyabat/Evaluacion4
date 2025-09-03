@@ -2,75 +2,119 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Registro Académico INACAP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AMItienda</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    footer {
-      text-align: center;
-      padding: 1.5rem 0;
-    }
-  </style>
 </head>
 <body>
-  <main class="container" role="main">
-    <header>
-      <img src="images/logoinacap.png" alt="Logo INACAP" class="logo" />
-      <h1>Registro Académico</h1>
-    </header>
+  <nav class="navbar">
+    <a href="nosotros.html" target="_blank" rel="noopener">Nosotros</a>
+    <a href="precios.html" target="_blank" rel="noopener">Precios</a>
+    <a href="cursos.html" target="_blank" rel="noopener">Cursos gratuitos</a>
+  </nav>
 
-<form id="formulario" novalidate aria-label="Formulario de registro académico">
-  <fieldset>
-    <legend>Datos del estudiante</legend>
+  <div class="awning"></div>
 
-    <label for="fecha">Fecha:</label>
-    <input type="date" id="fecha" name="fecha" required aria-required="true" />
-    <span class="error-message" id="error-fecha" aria-live="polite"></span>
+  <div class="content">
+    <aside class="catalog">
+      <h2>Categorías</h2>
+      <ul>
+        <li>Restaurantes</li>
+        <li>Moda</li>
+        <li>Tecnología</li>
+        <li>Hogar</li>
+        <li>Joyerías</li>
+        <li>Mascotas</li>
+        <li>Salud y Belleza</li>
+        <li>Deportes</li>
+        <li>Alimentos</li>
+        <li>Accesorios</li>
+        <li>Regalos</li>
+        <li>Arte</li>
+        <li>Juguetes</li>
+        <li>Libros</li>
+        <li>Muebles</li>
+        <li>Flores</li>
+        <li>Tours</li>
+        <li>Cafés</li>
+        <li>Fotografía</li>
+        <li>Oficinas</li>
+      </ul>
+    </aside>
 
-    <label for="rut">RUT:</label>
-    <input type="text" id="rut" name="rut" placeholder="12345678-9" required aria-required="true" />
-    <span class="error-message" id="error-rut" aria-live="polite"></span>
-
-    <label for="apellidos">Apellido(s):</label>
-    <input type="text" id="apellidos" name="apellidos" required aria-required="true" />
-
-    <label for="nombres">Nombre:</label>
-    <input type="text" id="nombres" name="nombres" required aria-required="true" />
-
-    <label for="correo">Correo electrónico:</label>
-    <input type="email" id="correo" name="correo" required aria-required="true" />
-    <span class="error-message" id="error-correo" aria-live="polite"></span>
-
-    <label for="calificacion">Calificación /100:</label>
-    <input type="number" id="calificacion" name="calificacion" min="1" max="100" required aria-required="true" />
-    <span class="error-message" id="error-calificacion" aria-live="polite"></span>
-
-    <label for="nota">Nota (1.0 a 7.0):</label>
-    <input type="text" id="nota" name="nota" readonly aria-readonly="true" />
-
-    <label for="evaluacion">Evaluación:</label>
-    <textarea id="evaluacion" name="evaluacion" rows="3"></textarea>
-
-    <label for="asignatura">Asignatura:</label>
-    <input type="text" id="asignatura" name="asignatura" required aria-required="true" />
-
-    <label for="curso">Curso:</label>
-    <input type="text" id="curso" name="curso" required aria-required="true" />
-  </fieldset>
-
-  <button type="submit" aria-label="Guardar registro académico">Guardar Registro</button>
-</form>
-
-
-    <section aria-live="polite" aria-atomic="true" aria-relevant="all" id="result-section">
-      <h2>Registros guardados</h2>
-      <pre id="resultado" tabindex="0"></pre>
+    <section class="vitrine">
+      <div class="vitrine-item">
+        <span class="icon">🍽️</span>
+        <h3>Ristorante</h3>
+        <p>ristorante.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">⚡</span>
+        <h3>MODA</h3>
+        <p>moda.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">🏠</span>
+        <h3>Hogar</h3>
+        <p>hogar.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">💎</span>
+        <h3>Joyería</h3>
+        <p>joyeria.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">💇‍♀️</span>
+        <h3>Estética</h3>
+        <p>estetica.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">🏃</span>
+        <h3>Active Sport</h3>
+        <p>deportes.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">🍎</span>
+        <h3>Alimentos</h3>
+        <p>alimenta.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">🎁</span>
+        <h3>Accessory</h3>
+        <p>accesory.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">🎨</span>
+        <h3>Arte</h3>
+        <p>arte.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">🌿</span>
+        <h3>Detalles</h3>
+        <p>detalles.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">🌼</span>
+        <h3>Detalles</h3>
+        <p>detalles.amitienda.cl</p>
+      </div>
+      <div class="vitrine-item">
+        <span class="icon">🌱</span>
+        <h3>Detalles</h3>
+        <p>detalles.amitienda.cl</p>
+      </div>
     </section>
-  </main>
+  </div>
 
-  <footer>
-    <p>Desarrollado por Stephanie Díaz y Felipe Yáñez</p>
-  </footer>
+  <div class="signboard">
+    <h3>Nuestros servicios</h3>
+    <ul>
+      <li>Página web</li>
+      <li>Correo corporativo</li>
+      <li>Digitalización de imagen</li>
+      <li>Asesoría gratuita</li>
+    </ul>
+  </div>
 
   <script src="script.js"></script>
 </body>
